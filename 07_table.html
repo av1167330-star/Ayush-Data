@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table - HTML</title>
+    <style>
+        /* ===========================================================
+   Table styling
+   Palette: deep slate header, soft zebra rows, single blue accent
+   Type: system sans-serif throughout
+   =========================================================== */
+
+:root {
+    --color-bg: #FFFFFF;
+    --color-head-bg: #2B2E3A;
+    --color-head-text: #FFFFFF;
+    --color-row-alt: #F6F7FB;
+    --color-border: #E2E4EA;
+    --color-ink: #1C1E26;
+    --color-accent: #3A6FF7;
+
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 48px 24px;
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background: var(--color-bg);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 28px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead th {
+    background: var(--color-head-bg);
+    color: var(--color-head-text);
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 18px;
+}
+
+tbody td {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    border-top: 1px solid var(--color-border);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--color-row-alt);
+}
+
+tbody tr:hover {
+    background: #EDF2FF;
+}
+
+/* Salary column right-aligned since it's numeric */
+td:last-child,
+th:last-child {
+    text-align: right;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 480px) {
+    body {
+        padding: 32px 12px;
+    }
+
+    thead th,
+    tbody td {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>Table in HTML</h1>
+    <table>
+        <!-- Heade of the table -->
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <!-- Tqble of the body -->
+        <tbody>
+            <tr>
+                <td>Ayush</td>
+                <td>BCA</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>Abhay</td>
+                <td>Bsc</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+                <td>Sahil</td>
+                <td>Software Engineer</td>
+                <td>$70000</td>
+            </tr>
+            <tr>
+                <td>Renuka</td>
+                <td>AI Engineer</td>
+                <td>$8000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

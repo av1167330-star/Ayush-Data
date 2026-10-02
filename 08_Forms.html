@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <style>
+        <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 48px 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #F4F5F8;
+        color: #1C1E26;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.75rem;
+        margin-bottom: 32px;
+    }
+
+    form {
+        max-width: 480px;
+        margin: 0 auto;
+        background: #FFFFFF;
+        border: 1px solid #E2E4EA;
+        border-radius: 10px;
+        padding: 32px;
+    }
+
+    form > div {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #333644;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 0.95rem;
+        border: 1px solid #D3D6DE;
+        border-radius: 6px;
+        font-family: inherit;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #3A6FF7;
+        box-shadow: 0 0 0 3px rgba(58, 111, 247, 0.15);
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 6px;
+    }
+
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+        display: inline;
+        font-weight: 400;
+        margin-right: 16px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background: #3A6FF7;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background: #2C5AD6;
+    }
+</style>
+    </style>
+</head>
+<body>=
+   <h1>Forms in HTML</h1>
+<form action="/submit.php">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter Name">
+    </div>
+
+    <div>
+        <label for="phone-no">Phone No</label>
+        <input id="phone-no" type="text" placeholder="Enter Phone No">
+    </div>
+<!-- Email Input -->
+    <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter Email">
+    </div>
+<!-- Password Input -->
+    <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter Password">
+    </div>
+<!-- Date Input -->
+    <div>
+        <label for="dob">Date of Birth</label>
+        <input id="dob" type="date">
+    </div>
+<!-- Dropdown (select input) for Gender -->
+    <div>
+        <p>Gender</p>
+        <input id="male" type="radio" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input id="female" type="radio" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input id="other" type="radio" name="gender" value="other">
+        <label for="other">Other</label>
+    </div>
+<!-- Radio button for subscription plan -->
+    <div>
+        <label for="subscription">Subscription Plan</label>
+        <select id="subscription" name="subscription">
+            <option value="">Select a plan</option>
+            <option value="basic">Basic</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+        </select>
+    </div>
+<!-- Checkbox for agrring to terms -->
+    <div>
+    <input id="terms" type="checkbox" name="terms" value="accepted">
+    <label for="terms">I agree to the Terms & Conditions</label>
+</div> 
+
+<!-- Textarea for Comments -->
+    <div>
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="Enter your comment"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>
